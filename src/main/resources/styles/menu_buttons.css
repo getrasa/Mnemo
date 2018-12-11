@@ -1,0 +1,22 @@
+.hover_border:hover {
+    -fx-background-color: #475A7C;
+}
+
+
+.cursor_hand {
+    -fx-cursor: hand;
+}
+
+
+
+.hover_deck:hover {
+
+     -fx-background-color: #FCFCFC;
+     -fx-cursor: hand;
+}
+
+.current_section {
+    -fx-background-color: #475A7C;
+}
+
+

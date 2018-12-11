@@ -1,0 +1,11 @@
+.textField {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4;
+}
+
+.textField:focused {
+    -fx-border-color: #00A8E8;
+    -fx-faint-focus-color: transparent;
+}

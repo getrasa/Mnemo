@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="610.0" prefWidth="610.0" styleClass="transparent_background" stylesheets="@../styles/options.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.FlashcardCreationController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff; -fx-border-color: #00A8E8; -fx-border-width: 2;" styleClass="shadow_popup" stylesheets="@../styles/options.css">
+         <children>
+            <HBox fx:id="draggableElement" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #00A8E8;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <Text fx:id="sometext" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Flashcads">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../img/close_button_white.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="480.0" prefWidth="600.0">
+               <children>
+                  <HBox prefHeight="75.0" prefWidth="600.0">
+                     <padding>
+                        <Insets left="40.0" right="40.0" />
+                     </padding>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="260.0">
+                           <children>
+                              <Text fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" text="Flashcard Type:">
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="flashcardTypeList" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></ChoiceBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="260.0">
+                           <children>
+                              <CheckBox fx:id="bothSides" mnemonicParsing="false" text="Both sides" textFill="#575f72">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="4.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></VBox>
+                     </children></HBox>
+                  <VBox prefHeight="480.0" prefWidth="100.0">
+                     <padding>
+                        <Insets left="40.0" right="40.0" />
+                     </padding>
+                     <children>
+                        <Text fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" text="Question:">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="questionText" prefHeight="65.0" prefWidth="520.0" styleClass="textAreaQuestion" stylesheets="@../styles/TextArea.css">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Text fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer:">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="18.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="answerText" prefHeight="65.0" prefWidth="520.0" styleClass="textAreaAnswer" stylesheets="@../styles/TextArea.css">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <CheckBox fx:id="specialReadingCheckBox" mnemonicParsing="false" onAction="#showSpecialReading" text="Special reading" textFill="#575f72">
+                           <VBox.margin>
+                              <Insets top="18.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <TextArea fx:id="readingText" prefHeight="65.0" prefWidth="520.0" styleClass="textAreaReading" stylesheets="@../styles/TextArea.css" visible="false">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="80.0" prefWidth="100.0">
+               <children>
+                  <HBox fx:id="addButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#saveFlashcard" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #00A8E8; -fx-background-radius: 3;" styleClass="shadow_decks" stylesheets="@../styles/options.css">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Add">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="45.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="810.0" prefWidth="1210.0" styleClass="transparent_background" stylesheets="@../styles/options.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.MainController">
+   <children>
+      <StackPane alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #00A8E8;" styleClass="shadow_popup" stylesheets="@../styles/options.css">
+         <children>
+            <HBox prefHeight="800.0" prefWidth="1200.0">
+               <children>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="690.0" prefWidth="250.0" style="-fx-background-color: #4C6085;">
+                     <children>
+                        <HBox prefHeight="110.0" prefWidth="250.0" style="-fx-background-color: #2196F3;" styleClass="shadow_logo" stylesheets="@../styles/options.css">
+                           <children>
+                              <ImageView fitHeight="110.0" fitWidth="250.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../img/menmo_logo_png.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <VBox prefWidth="250.0" stylesheets="@../styles/menu_buttons.css" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="250.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="COMANDER'S CENTER">
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="goDashboard" alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/baseline_book_white_36dp.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Dashboard">
+                                       <HBox.margin>
+                                          <Insets left="18.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="hover_border" />
+                                    <String fx:value="cursor_hand" />
+                                    <String fx:value="current_section" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox fx:id="goSharedDecks" alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="250.0" styleClass="cursor_hand">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/sharp_library_books_white_36dp.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Shared decks">
+                                       <HBox.margin>
+                                          <Insets left="18.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="250.0" styleClass="cursor_hand">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/baseline_bookmarks_white_36dp.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Group decks">
+                                       <HBox.margin>
+                                          <Insets left="18.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="250.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="HELP">
+                                       <HBox.margin>
+                                          <Insets left="34.0" top="32.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/baseline_settings_white_36dp.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Settings">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="hover_border" />
+                                    <String fx:value="cursor_hand" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/outline_info_white_36dp.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="34.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Info">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Segoe UI" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="hover_border" />
+                                    <String fx:value="cursor_hand" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #465879;" VBox.vgrow="NEVER" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="800.0" prefWidth="950.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox prefHeight="110.0">
+                           <children>
+                              <HBox fx:id="draggableElement" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="772.0">
+                                       <children>
+                                          <Text fill="#465879" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+                                             <font>
+                                                <Font name="System Bold" size="22.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="55.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="TOP_RIGHT" prefWidth="180.0" stylesheets="@../styles/menu_buttons.css">
+                                       <children>
+                                          <ImageView fx:id="closeButton" fitHeight="13.0" fitWidth="13.0" onMouseClicked="#closeProgram" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                                             <image>
+                                                <Image url="@../img/close_icon.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="closeButton1" fitHeight="13.0" fitWidth="13.0" onMouseClicked="#minimizeProgram" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                                             <image>
+                                                <Image url="@../img/minimize_icon.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="690.0" prefWidth="950.0" style="-fx-background-color: #ECEFF1;" stylesheets="@../styles/options.css" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="80.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="655.0">
+                                       <children>
+                                          <Text fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR DECKS">
+                                             <VBox.margin>
+                                                <Insets left="55.0" top="26.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Segoe UI" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="42.0" stroke="#575f72" strokeLineCap="ROUND" strokeWidth="4.0">
+                                             <VBox.margin>
+                                                <Insets left="55.0" top="12.0" />
+                                             </VBox.margin>
+                                          </Line>
+                                       </children>
+                                    </VBox>
+                                    <StackPane alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="225.0">
+                                       <children>
+                                          <TextField fx:id="searchBar" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="225.0" promptText="Search for title, subject, word" style="-fx-border-radius: 12; -fx-background-radius: 12;" styleClass="textField" stylesheets="@../styles/TextField.css">
+                                             <font>
+                                                <Font name="Segoe UI Semilight Italic" size="10.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets top="15.0" />
+                                             </StackPane.margin>
+                                          </TextField>
+                                          <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                             <StackPane.margin>
+                                                <Insets right="12.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                       </children>
+                                    </StackPane>
+                                 </children></HBox>
+                              <ScrollPane fx:id="scrollBar" prefHeight="620.0" prefWidth="950.0" style="-fx-background: #ECEFF1;" styleClass="edge-to-edge">
+                                 <content>
+                                    <GridPane fx:id="addHere" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="addDecks" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#createNewDeck" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 4em; -fx-background-color: #2196F3;">
+               <StackPane.margin>
+                  <Insets bottom="52.0" right="42.0" />
+               </StackPane.margin>
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add_button.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@../styles/options.css" />
+                  <URL value="@../styles/menu_buttons.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="shadow_decks" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="deckButton" prefHeight="175.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-background-radius: 5 5 5 5;" stylesheets="@../styles/menu_buttons.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.DeckButtonController">
+   <children>
+      <VBox fx:id="openDeck" onMouseClicked="#goToDeckDashboard" prefHeight="125.0" prefWidth="100.0" style="-fx-background-radius: 5 5 0 0;" stylesheets="@../styles/menu_buttons.css">
+         <children>
+            <Text fx:id="subjectLabel" fill="#9497a0" strokeType="OUTSIDE" strokeWidth="0.0" text="JAPANESE">
+               <VBox.margin>
+                  <Insets left="20.0" top="16.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Text>
+            <Line endX="45.0" stroke="#f3f3f3" strokeLineCap="ROUND" strokeWidth="2.0">
+               <VBox.margin>
+                  <Insets left="20.0" top="14.0" />
+               </VBox.margin>
+            </Line>
+            <Text fx:id="titleLabel" fill="#696d80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-line-spacing: -2;" text="Japanese vocabulary from&#10;anime.">
+               <font>
+                  <Font name="Segoe UI" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="12.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <HBox fx:id="buttonColorBar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #42CDBD; -fx-background-radius: 0 0 5 5;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="128.0">
+               <children>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../img/baseline_inbox_white_36dp.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="reviewLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="20 Review">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="104.0">
+               <children>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/baseline_book_white_36dp.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="lessonLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="12 Lessons">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox fx:id="buttonColorBarDark" alignment="CENTER" maxWidth="-Infinity" onMousePressed="#deckButtonOptions" prefHeight="50.0" prefWidth="23.0" style="-fx-background-color: #3CBBAC; -fx-background-radius: 0 0 5 0;">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/baseline_more_vert_white_36dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="shadow_decks" />
+      <String fx:value="hover_deck" />
+   </styleClass>
+</VBox>

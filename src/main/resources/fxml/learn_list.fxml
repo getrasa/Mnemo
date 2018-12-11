@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="810.0" prefWidth="1210.0" styleClass="transparent_background" stylesheets="@../styles/options.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.LessonListController">
+   <children>
+      <StackPane alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="shadow_popup" stylesheets="@../styles/options.css">
+         <children>
+            <VBox prefHeight="800.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="360.0" prefWidth="1200.0" style="-fx-background-color: #F7A072;">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="360.0" prefWidth="1200.0">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="1200.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="30.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#returnToDashboard" pickOnBounds="true" preserveRatio="true" styleClass="shadow_short">
+                                             <image>
+                                                <Image url="@../img/arrow-white.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="draggableElement" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="1150.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="140.0">
+                                             <HBox.margin>
+                                                <Insets right="100.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" minHeight="40.0" prefWidth="70.0">
+                                                   <children>
+                                                      <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow_short">
+                                                         <image>
+                                                            <Image url="@../img/tick-white.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="20">
+                                                         <font>
+                                                            <Font name="Segoe UI Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="12.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="40.0" prefWidth="70.0">
+                                                   <children>
+                                                      <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow_short">
+                                                         <image>
+                                                            <Image url="@../img/baseline_inbox_white_36dp.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="20">
+                                                         <font>
+                                                            <Font name="Segoe UI Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="12.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="TOP_RIGHT" minHeight="40.0" prefWidth="20.0" stylesheets="@../styles/menu_buttons.css">
+                                       <children>
+                                          <ImageView fx:id="closeButton" fitHeight="13.0" fitWidth="13.0" onMouseClicked="#closeProgram" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                                             <image>
+                                                <Image url="@../img/close_icon.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets right="8.0" top="8.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="closeButton1" fitHeight="13.0" fitWidth="13.0" onMouseClicked="#minimizeProgram" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                                             <image>
+                                                <Image url="@../img/minimize_icon.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets right="8.0" top="8.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="280.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fx:id="questionText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Question?" textAlignment="CENTER" wrappingWidth="1000.0">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="30.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox fx:id="answerSection" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="440.0" prefWidth="1200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="360.0" prefWidth="1200.0" style="-fx-background-color: #EEF3F6;">
+                     <children>
+                        <Text fx:id="answerText" fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Answer!" textAlignment="CENTER" wrappingWidth="1000.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <HBox alignment="CENTER" prefWidth="1100.0">
+                           <children>
+                              <HBox fx:id="previousButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goPrevious" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FEF6F2; -fx-background-radius: 50%; -fx-border-color: #F7A072; -fx-border-radius: 50%; -fx-border-width: 2;" styleClass="shadow_short">
+                                 <HBox.margin>
+                                    <Insets right="100.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/arrow-left-orange-01.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Line endY="50.0" stroke="#e9ecf1" strokeWidth="2.0" />
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goNext" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FEF6F2; -fx-background-radius: 50%; -fx-border-color: #F7A072; -fx-border-radius: 50%; -fx-border-width: 2;" styleClass="shadow_short">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/arrow-right-orange-01.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="810.0" prefWidth="1210.0" styleClass="transparent_background" stylesheets="@../styles/options.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.ReviewController">
+   <children>
+      <StackPane alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="shadow_popup" stylesheets="@../styles/options.css">
+         <children>
+            <VBox prefHeight="800.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="1200.0" style="-fx-background-color: #00A8E8;">
+                     <children>
+                        <HBox fx:id="draggableElement" prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #00A8E8;" styleClass="shadow_short" stylesheets="@../styles/options.css">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="600.0">
+                                 <children>
+                                    <HBox alignment="CENTER" onMouseClicked="#returnToDashboard" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #0099D3;">
+                                       <children>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="600.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #0099D3;">
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Text fx:id="numberLeft" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="0">
+                                             <font>
+                                                <Font name="Segoe UI Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="360.0" prefWidth="1200.0">
+                           <children>
+                              <Text fx:id="questionText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Question?" textAlignment="CENTER" wrappingWidth="1000.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0">
+                     <children>
+                        <VBox fx:id="answerSection" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0" visible="false">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="320.0" prefWidth="1200.0" style="-fx-background-color: #EEF3F6;">
+                                 <children>
+                                    <Text fx:id="answerText" fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Answer!" textAlignment="CENTER" wrappingWidth="1000.0">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="30.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#incorrectAnswer" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #FF6C44; -fx-border-radius: 50%; -fx-border-width: 2;" />
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#unsureAnswer" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #F2DC5D; -fx-border-radius: 50%; -fx-border-width: 2;">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#correctAnswer" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #42CDBD; -fx-border-radius: 50%; -fx-border-width: 2;">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="disappearSection" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="320.0" prefWidth="1200.0" style="-fx-background-color: #EEF3F6;" />
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #9497A0;" styleClass="shadow_short">
+                                       <children>
+                                          <Text fx:id="questionText1" fill="WHITE" onMouseClicked="#showAnswer" strokeType="OUTSIDE" strokeWidth="0.0" text="Show">
+                                             <font>
+                                                <Font name="Segoe UI Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>

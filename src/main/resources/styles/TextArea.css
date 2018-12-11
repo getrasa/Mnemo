@@ -1,0 +1,69 @@
+.textAreaQuestion {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #ccc;
+}
+
+.textAreaQuestion .content {
+    -fx-background-color: transparent, white, transparent, white;
+    fx-text-fill: gray;
+}
+
+.textAreaQuestion:focused {
+    -fx-border-color: #00A8E8;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.textAreaAnswer {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #ccc;
+}
+
+.textAreaAnswer .content {
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-text-fill: gray;
+}
+
+.textAreaAnswer:focused {
+    -fx-border-color: #F7A072;
+    -fx-faint-focus-color: transparent;
+
+}
+
+.textAreaReading {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #ccc;
+}
+
+.textAreaReading:focused {
+    -fx-border-color: #AD8CF4;
+    -fx-faint-focus-color: transparent;
+}
+
+
+
+.textAreaReading {
+    -fx-background-color: #fff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #ccc;
+}
+
+.textAreaReading .content {
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-text-fill: gray;
+}
+
+.textAreaReading:focused {
+    -fx-border-color: #AD8CF4;
+    -fx-faint-focus-color: transparent;
+
+}
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="810.0" prefWidth="1210.0" styleClass="transparent_background" stylesheets="@../styles/options.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mnemo.LessonShowController">
+   <children>
+      <StackPane alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="shadow_popup" stylesheets="@../styles/options.css">
+         <children>
+            <VBox prefHeight="800.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="360.0" prefWidth="1200.0" style="-fx-background-color: #F7A072;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="360.0" prefWidth="1200.0">
+                           <children>
+                              <Text fx:id="questionText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Question?" textAlignment="CENTER" wrappingWidth="1000.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="440.0" prefWidth="1200.0">
+                     <children>
+                        <VBox fx:id="answerSection" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="440.0" prefWidth="1200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="360.0" prefWidth="1200.0" style="-fx-background-color: #EEF3F6;">
+                                 <children>
+                                    <Text fx:id="answerText" fill="#575f72" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow_short" text="Answer!" textAlignment="CENTER" wrappingWidth="1000.0">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="30.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#incorrectAnswer" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #F7A072; -fx-border-radius: 50%; -fx-border-width: 2;">
+                                       <HBox.margin>
+                                          <Insets right="100.0" />
+                                       </HBox.margin></HBox>
+                                    <Line endY="50.0" stroke="#e9ecf1" strokeWidth="3.0" />
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#correctAnswer" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #F7A072; -fx-border-radius: 50%; -fx-border-width: 2;">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>
