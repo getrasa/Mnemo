@@ -5,6 +5,8 @@
 ### Description (This application is still incomplete!)
 Mnemo is an SRS application based on spaced repetition method, which is a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect ([Link](https://en.wikipedia.org/wiki/Spaced_repetition)). The purpose of this application is to both enhance and simplify the process of memorizing new vocabulary. 
 
+The name *Mnemo* is derived from Ancient Greek word "mnemo" which means "memory". Additionally it can also be thought of as an abreviation to the word "mnemonic".
+
 #### Intervals
 The intervals range from 4hours to 4months each assigning particular level to a word. If a word has been reviewed correctly at a given interval, its level will go one up, or one down otherwise. When a word with level 8 is reviewed correctly it is considered as "mnemorized" and will not appear again in the cue.
 - Lvl 1 | 4h
