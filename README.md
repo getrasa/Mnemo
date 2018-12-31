@@ -1,5 +1,5 @@
 # Mnemo
-![Mnemo Printscreen](/printscreen.PNG)
+![Mnemo Printscreen](/screenprint.PNG)
 
 
 ### Description (This application is still incomplete!)
